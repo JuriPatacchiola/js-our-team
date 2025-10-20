@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+:root {
+  --accent: #ff4e7a;
+  --email: #29b6f6;
+  --card-bg: #000;
+  --muted: #cfcfcf;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 36px auto;
+  padding: 0 24px 80px;
+}
+
+/* header */
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.heading h1 {
+  font-size: 44px;
+  color: var(--accent);
+  font-weight: 800;
+}
+.heading p {
+  margin: 16px auto;
+  max-width: 900px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* grid: 3 col */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 28px 32px;
+}
+
+/* CARD: orientamento orizzontale, altezza fissata */
+.card {
+  display: flex;
+  align-items: stretch;
+  background: transparent;
+  width: 400px; 
+  height: auto;           
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* FOTO: larghezza maggiore rispetto alla versione precedente */
+.card .photo {
+  flex: 0 0 180px;         /* larghezza immagine */
+  height: 100%;            /* riempie l'altezza della card */
+  overflow: hidden;
+}
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO: padding ridotto per non aumentare l'altezza della card */
+.card .info {
+  background: var(--card-bg);
+  color: #fff;
+  padding: 12px 20px;      /* padding corto per mantenere altezza */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente i testi */
+  gap: 4px;
+  flex: 1;
+}
+
+/* TESTI */
+.name {
+  font-weight: 800;
+  font-size: 20px;        /* leggermente più piccolo per adattarsi alla card bassa */
+  text-transform: uppercase;
+  margin: 0;
+}
+.role {
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0;
+  font-size: 13px;
+}
+.email {
+  color: var(--email);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-all;
+  margin-top: 6px;
+  font-size: 13px;
+}
+.email:hover { text-decoration: underline; }
+
+/* hover facoltativo per evidenziare */
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform 160ms ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
