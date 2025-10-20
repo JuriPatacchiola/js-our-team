@@ -31,3 +31,25 @@
     for (let i = 0; i < teamMembers.length; i++) {
       addMemberCard(teamMembers[i]);
     }
+
+     function createAddMemberForm() {
+      const form = document.createElement("form");
+      form.classList.add("add-member-form");
+
+      form.innerHTML = `
+        <div class="form-columns">
+          <div class="column">
+            <input type="text" id="member-name" placeholder="Nome" required>
+            <input type="text" id="member-role" placeholder="Ruolo" required>
+          </div>
+          <div class="column">
+            <input type="email" id="member-email" placeholder="Email" required>
+            <input type="text" id="member-img" placeholder="URL immagine">
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Aggiungi Membro</button>
+      `;
+    
+    
+    
+    }
