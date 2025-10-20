@@ -6,3 +6,6 @@
       { name: "Roberto Lorem", role: "SEO Specialist", email: "robertolorem@team.com", img: "assets/img/male3.png" },
       { name: "Daniela Amet", role: "Analyst", email: "danielaamet@team.com", img: "assets/img/female3.png" }
     ];
+
+
+    const container = document.getElementById("team-container");
