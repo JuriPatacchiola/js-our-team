@@ -59,7 +59,14 @@
         const email = document.getElementById("member-email").value.trim();
         const img = document.getElementById("member-img").value.trim() || "assets/img/default.png";
 
-        
+        if (name && role && email) {
+          const newMember = { name, role, email, img };
+          teamMembers.push(newMember);
+          addMemberCard(newMember);
+          form.reset();
+        } else {
+          alert("Compila tutti i campi!");
+        }
       
       })
     
