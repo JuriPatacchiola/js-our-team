@@ -39,7 +39,7 @@ body {
   line-height: 1.6;
 }
 
-/* grid: 3 col */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,7 +47,7 @@ body {
   gap: 28px 32px;
 }
 
-/* CARD: orientamento orizzontale, altezza fissata */
+
 .card {
   display: flex;
   align-items: stretch;
@@ -58,10 +58,10 @@ body {
   border-radius: 2px;
 }
 
-/* FOTO: larghezza maggiore rispetto alla versione precedente */
+
 .card .photo {
-  flex: 0 0 180px;         /* larghezza immagine */
-  height: 100%;            /* riempie l'altezza della card */
+  flex: 0 0 180px;         
+  height: 100%;            
   overflow: hidden;
 }
 .card .photo img {
@@ -71,22 +71,22 @@ body {
   display: block;
 }
 
-/* INFO: padding ridotto per non aumentare l'altezza della card */
+
 .card .info {
   background: var(--card-bg);
   color: #fff;
-  padding: 12px 20px;      /* padding corto per mantenere altezza */
+  padding: 12px 20px;     
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente i testi */
+  justify-content: center; 
   gap: 4px;
   flex: 1;
 }
 
-/* TESTI */
+
 .name {
   font-weight: 800;
-  font-size: 20px;        /* leggermente più piccolo per adattarsi alla card bassa */
+  font-size: 20px;        
   text-transform: uppercase;
   margin: 0;
 }
@@ -106,9 +106,29 @@ body {
 }
 .email:hover { text-decoration: underline; }
 
-/* hover facoltativo per evidenziare */
+
 .card:hover {
   transform: translateY(-4px);
   transition: transform 160ms ease;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 980px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .card { height: 105px; }
+  .card .photo { flex-basis: 160px; }
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card {
+    height: 95px;
+    width: 90%; 
+  }
+  .card .photo { flex-basis: 140px; }
+  .heading h1 { font-size: 34px; }
 }
