@@ -27,3 +27,7 @@
         </div>
       `;
     }
+
+    for (let i = 0; i < teamMembers.length; i++) {
+      addMemberCard(teamMembers[i]);
+    }
