@@ -54,7 +54,12 @@
 
     form.addEventListener("submit", function(e) {
         e.preventDefault();
-      
+        const name = document.getElementById("member-name").value.trim();
+        const role = document.getElementById("member-role").value.trim();
+        const email = document.getElementById("member-email").value.trim();
+        const img = document.getElementById("member-img").value.trim() || "assets/img/default.png";
+
+        
       
       })
     
